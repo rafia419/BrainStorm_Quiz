@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainStorm Quiz - Result</title>
+
+    <link rel="stylesheet" href="result.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <h2>BrainStorm Quiz</h2>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a data-category="HTML">HTML</a></li>
+                    <li><a data-category="CSS">CSS</a></li>
+                    <li><a data-category="JavaScript">JavaScript</a></li>
+                    <li><a data-category="Machine Learning">Machine Learning</a></li>
+                    <li><a data-category="General Knowledge">General Knowledge</a></li>
+                </ul>
+            </li>
+            <li><a href="result.html" class="active">Result</a></li>
+            <li><a href="../add question/add-questions.html">Add Questions</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../about/about.html">About</a></li>
+        </ul>
+
+        <div class="nav-btn" id="navButtons">
+            <a href="../index.html">
+                <button class="log-out">Log Out</button>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <section class="result">
+        <div class="result-container">
+
+    <h1>Quiz Completed!</h1>
+
+    <div class="performance-message">
+        <h2 id="performanceTitle"></h2>
+        <p id="performanceText"></p>
+    </div>
+
+    <!-- Score Circle -->
+    <div class="score-circle">
+
+        <div class="circle">
+
+            <h2 id="scoreText">0/0</h2>
+
+            <p>Your Score</p>
+
+        </div>
+
+    </div>
+
+    <div class="quiz-info">
+
+        <div class="info-box">
+            <h4>Category</h4>
+            <p id="quizCategory">HTML</p>
+        </div>
+
+        <div class="info-box">
+            <h4>Badge</h4>
+            <p id="badge">🥇 Gold</p>
+        </div>
+
+        <div class="info-box">
+            <h4>Rank</h4>
+            <p id="rank"># 2</p>
+        </div>
+
+    </div>
+
+    <!-- Result Cards -->
+
+    <div class="result-cards">
+
+        <div class="card">
+
+            <h2 id="correctAnswers">0</h2>
+
+            <p>Right Answers</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="wrongAnswers">0</h2>
+
+            <p>Wrong Answers</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2 id="percentage">0%</h2>
+
+            <p>Percentage</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Buttons -->
+
+    <div class="result-buttons">
+
+        <button id="playAgainBtn">
+            Play Again
+        </button>
+
+        <button id="reviewBtn">
+            Review Answers
+        </button>
+
+        <button id="homeBtn">
+            Back to Home
+        </button>
+
+    </div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/category-dropdown.js"></script>
+    <script src="result.js"></script>
+
+</body>
+</html>

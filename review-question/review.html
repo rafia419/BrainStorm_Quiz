@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainStorm Quiz - Review Question and Answer</title>
+
+    <link rel="stylesheet" href="review.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <h2>BrainStorm Quiz</h2>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a data-category="HTML">HTML</a></li>
+                    <li><a data-category="CSS">CSS</a></li>
+                    <li><a data-category="JavaScript">JavaScript</a></li>
+                    <li><a data-category="Machine Learning">Machine Learning</a></li>
+                    <li><a data-category="General Knowledge">General Knowledge</a></li>
+                </ul>
+            </li>
+            <li><a href="review.html" class="active">Review</a></li>
+            <li><a href="../add question/add-questions.html">Add Questions</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../about/about.html">About</a></li>
+        </ul>
+
+        <div class="nav-btn" id="navButtons">
+            <a href="../index.html">
+                <button class="log-out">Log Out</button>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <section class="review">
+        <div class="review-container">
+
+            <h1>Review Answers</h1>
+
+            <div id="reviewList"></div>
+
+            <div class="back-btn">
+                <a href="../result/result.html">
+                    <button>Back to Result</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+    <script src="../js/auth.js"></script>
+    <script src="../js/category-dropdown.js"></script>
+    <script src="review.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BrainStorm Quiz-Register Page</title>
+        <link rel="stylesheet" href="reg.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-brain"></i>
+                <h2>BrainStorm Quiz</h2>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>         
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="register.html" class="home">Register</a></li>
+                <li><a href="../about/about.html">About</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <a href="login.html">
+                <button class="sign-in">Sign In</button>
+                </a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="register-container">
+
+                <div class="register-box">
+                    <h1>Create Account</h1>
+                    <p class="sub-text">
+                        Join us and start your learning journey
+                    </p>
+
+                    <form>
+                        <div class="input-box">
+                            <label>Username</label>
+                            <input type="text" placeholder="Enter your username">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Email</label>
+                            <input type="email" placeholder="Enter your email">
+                        </div>
+
+                        <div class="input-box">
+                            <label>Password</label>
+
+                            <div class="password-box">
+                                <input
+                                    type="password"
+                                    id="password"
+                                    placeholder="Enter your password"
+                                >
+
+                                <i class="fa-solid fa-eye toggle-password"></i>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <label>Confirm Password</label>
+
+                            <div class="password-box">
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    placeholder="Confirm your password"
+                                >
+
+                                <i class="fa-solid fa-eye toggle-password"></i>
+                            </div>
+                        </div>
+
+                        <button class="register-btn">
+                            Sign Up
+                        </button>
+
+                        <p class="login-text">
+                            Already have an account?
+                            <a href="login.html">Sign In</a>
+                        </p>
+
+                    </form>
+                </div>
+
+                <div class="register-image">
+                    <img src="register.png" alt="Register Image">
+                </div>
+            </div>
+        </section>
+        <script src="register.js"></script>
+    </body>
+</html>

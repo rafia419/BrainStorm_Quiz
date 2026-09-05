@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainStorm Quiz - Add Question</title>
+
+    <link rel="stylesheet" href="add-questions.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <h2>BrainStorm Quiz</h2>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>       
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a data-category="HTML">HTML</a></li>
+                    <li><a data-category="CSS">CSS</a></li>
+                    <li><a data-category="JavaScript">JavaScript</a></li>
+                    <li><a data-category="Machine Learning">Machine Learning</a></li>
+                    <li><a data-category="General Knowledge">General Knowledge</a></li>
+                    <li class="mobile-user"><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="add-question.html" class="active">Add Questions</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../about/about.html">About</a></li>
+        </ul>
+
+        <div class="nav-btn" id="navButtons">
+            <a href="../index.html">
+                <button class="log-out">Log Out</button>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <section class="main-container">
+
+        <div class="question-form">
+            <h1>Add New Question</h1>
+
+            <form id="questionForm">
+
+                <div class="input-box">
+
+                    <label>Category</label>
+                    <select id="category">
+
+                        <option value="">Select Category</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="General Knowledge">General Knowledge</option>
+                        <option value="Machine Learning">Machine Learning</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-box">
+                    <label>Question</label>
+                    <textarea id="question"
+                        placeholder="Enter your question"></textarea>
+                </div>
+
+                <div class="input-box">
+                    <label>Option 1</label>
+                    <input type="text" id="option1">
+                </div>
+
+                <div class="input-box">
+                    <label>Option 2</label>
+                    <input type="text" id="option2">
+                </div>
+
+                <div class="input-box">
+                    <label>Option 3</label>
+                    <input type="text" id="option3">
+                </div>
+
+                <div class="input-box">
+                    <label>Option 4</label>
+                    <input type="text" id="option4">
+                </div>
+
+                <div class="input-box">
+
+                    <label>Correct Answer</label>
+
+                    <select id="correctAnswer">
+                        <option value="">Select Correct Answer</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+
+                </div>
+
+                <button id="submitBtn" type="submit" class="add-btn">
+                    Add Question
+                </button>
+
+
+            </form>
+
+        </div>
+
+        <div class="question-list">
+            <h1>My Questions</h1>
+            <div id="allQuestions"></div>
+        </div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/category-dropdown.js"></script>
+    <script src="add-questions.js"></script>
+
+</body>
+</html>

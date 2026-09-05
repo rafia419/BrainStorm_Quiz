@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        BrainStorm Quiz - Profile
+    </title>
+
+    <link rel="stylesheet"
+    href="profile.css">
+
+    <!-- Google Font -->
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <h2>BrainStorm Quiz</h2>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>        
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a data-category="HTML">HTML</a></li>
+                    <li><a data-category="CSS">CSS</a></li>
+                    <li><a data-category="JavaScript">JavaScript</a></li>
+                    <li><a data-category="Machine Learning">Machine Learning</a></li>
+                    <li><a data-category="General Knowledge">General Knowledge</a></li>
+                    <li class="mobile-user"><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="../add question/add-questions.html">Add Questions</a></li>
+            <li><a href="../profile/profile.html" class="active">Profile</a></li>
+            <li><a href="../about/about.html">About</a></li>
+        </ul>
+
+        <div class="nav-btn" id="navButtons">
+            <a href="../index.html">
+                <button class="log-out">
+                    Log Out
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="profile-container">
+
+        <!-- Left Side -->
+        <div class="profile-card">
+            <div class="profile-image">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-info">
+                <h2 id="userName">
+                    User Name
+                </h2>
+
+                <p class="info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span id="userEmail">
+                        user@gmail.com
+                    </span>
+                </p>
+
+                <p class="info">
+                    <i class="fa-solid fa-calendar"></i>
+                    Joined:
+                    <span id="joinDate">
+                        May 2026
+                    </span>
+                </p>
+            </div>
+
+            <!-- Account Settings -->
+            <div class="account-settings">
+                <h3>
+                    Account Settings
+                </h3>
+
+                <button class="setting-btn">
+                    <i class="fa-solid fa-user-pen"></i>
+                    Change Name
+                </button>
+
+                <button class="setting-btn">
+                    <i class="fa-solid fa-lock"></i>
+                    Change Password
+                </button>
+
+                <button class="setting-btn">
+                    <i class="fa-solid fa-image"></i>
+                    Change Profile Picture
+                </button>
+
+                <button onclick="history.back()" class="back-btn">
+                    ⬅ Back
+                </button>                 
+            </div>           
+        </div>
+
+        <!-- Right Side -->
+        <div class="profile-details">
+
+            <!-- Statistics -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <h3 id="quizPlayed">
+                        0
+                    </h3>
+                    <p>Quiz Played</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-check"></i>
+                    <h3 id="correctAnswers">
+                        0
+                    </h3>
+                    <p>Correct Answers</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3 id="bestScore">
+                        0
+                    </h3>
+                    <p>Best Score</p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3 id="averageScore">
+                        0%
+                    </h3>
+                    <p>Average Score</p>
+                </div>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="leaderboard-section">
+                <h2>🏆 Leaderboard</h2>
+                <div id="leaderboard"></div>
+                <div class="my-rank">
+                    <strong>Your Rank:</strong>
+                    <span id="userRank">#-</span>
+                </div>
+            </div> 
+
+            <!-- Category Performance -->
+            <div class="performance-section">
+                <h2>
+                    📊 Category Performance
+                </h2>
+
+                <div id="categoryPerformance"></div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievement-section">
+                <h2>
+                    🏅 Achievements
+                </h2>
+                <div id="achievementList"></div>
+            </div>            
+
+            <!-- Question Statistics -->
+            <div class="question-stats-section">
+                <h2>📝 Question Statistics</h2>
+                <div id="questionStats"></div>
+                <div class="total-question">
+                    Total Questions Created:
+                    <span id="totalQuestionsCreated">0</span>
+                </div>
+            </div>
+
+            <!-- Quiz History -->
+            <div class="quiz-history-section">
+                <h2>📜 Recent Quiz History</h2>
+                <div id="quizHistory"></div>
+            </div>
+
+            <!-- Added Questions -->
+            <div class="question-section">
+                <h2>
+                    My Added Questions
+                </h2>
+                <div id="myQuestions">
+                </div>
+            </div> 
+
+            <div class="bottom-back">
+                <button onclick="history.back()"class="back-btn">
+                    ⬅ Back
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/category-dropdown.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

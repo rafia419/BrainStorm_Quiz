@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainStorm Quiz - Quiz</title>
+
+    <link rel="stylesheet" href="quiz.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-brain"></i>
+            <h2>BrainStorm Quiz</h2>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                <ul class="dropdown-menu">
+                    <li><a data-category="HTML">HTML</a></li>
+                    <li><a data-category="CSS">CSS</a></li>
+                    <li><a data-category="JavaScript">JavaScript</a></li>
+                    <li><a data-category="Machine Learning">Machine Learning</a></li>
+                    <li><a data-category="General Knowledge">General Knowledge</a></li>
+                    <li class="mobile-user"><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="../add question/add-questions.html">Add Questions</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../about/about.html">About</a></li>
+        </ul>
+
+        <div class="nav-btn" id="navButtons">
+            <a href="../index.html">
+                <button class="log-out">Log Out</button>
+            </a>
+        </div>
+
+    </nav>
+
+
+    <section class="quiz-container">
+
+        <!-- Top -->
+
+        <div class="quiz-top">
+
+            <div class="question-count">
+                Question <span id="currentQuestion">1</span>
+                of
+                <span id="totalQuestion">10</span>
+            </div>
+
+            <div class="timer">
+                Time Left:
+                <span id="time">10:00</span>
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="progress-bar">
+
+            <div class="progress"></div>
+
+        </div>
+
+
+        <!-- Quiz Box -->
+
+        <div class="quiz-box">
+            <h2 id="questionText">
+                Question Here
+            </h2>
+
+            <div class="options" id="optionsContainer">
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="quiz-buttons">
+
+                <button id="prevBtn">
+                    Previous
+                </button>
+
+                <button id="nextBtn">
+                    Next
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script src="../js/auth.js"></script>
+    <script src="../js/category-dropdown.js"></script>
+    <script src="quiz.js"></script>
+
+</body>
+</html>

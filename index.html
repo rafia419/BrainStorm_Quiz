@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BrainStorm Quiz</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-brain"></i>
+                <h2>BrainStorm Quiz</h2>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="home">Home</a></li>
+
+                <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a data-category="HTML">HTML</a></li>
+                        <li><a data-category="CSS">CSS</a></li>
+                        <li><a data-category="JavaScript">JavaScript</a></li>
+                        <li><a data-category="Machine Learning">Machine Learning</a></li>
+                        <li><a data-category="General Knowledge">General Knowledge</a></li>
+                    </ul>
+                </li>
+
+                <li id="quizNav" style="display:none;"> <a href="#">Quiz</a> </li>
+                <li><a href="add question/add-questions.html" class="signLink">Add Questions</a></li>
+                <li id="profileNav" style="display:none;"><a href="profile/profile.html">Profile </a></li>
+                <li><a href="about/about.html">About</a></li>
+            </ul>
+
+            <div class="nav-btn" id="navButtons">
+                <a href="sign-up-in page/login.html">
+                <button class="sign-in">Sign In</button>
+                </a>
+
+                <a href="sign-up-in page/register.html">
+                <button class="sign-in">Sign Up</button>
+                </a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-text">
+                <p class="wlc">WELCOME TO</p>
+                <h1><span>BrainStorm</span> Quiz</h1>
+                <p class="dscrpt">Challenge your mind. Test your knowledge. <br>
+                    Learn and grow everyday!
+                </p>
+
+                <div class="hero-btns">
+                    <button class="start-btn signLink">Start Quiz <i class="fa-solid fa-arrow-right"></i></button>
+                    <button class="explore-btn signLink">Explore Categories <i class="fa-solid fa-border-all"></i></button>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="brain.png" alt="Brain Image">
+            </div>
+        </section>        
+
+        <section class="features">
+            <div class="card">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h3>Multiple Categories</h3>
+                <p>Choose from various topics</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-list"></i>
+                <h3>10 Questions</h3>
+                <p>Each quiz contains 10 MCQs</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-trophy"></i>
+                <h3>Instant Result</h3>
+                <p>Get result immediately</p>
+            </div>            
+
+            <div class="card">
+                <i class="fa-solid fa-circle-up"></i>
+                <h3>Track Progress</h3>
+                <p>Improve your knowledge</p>
+            </div>
+        </section>
+
+        <section class="categories-preview">
+            <h2>Explore Categories</h2>
+            <div id="categoryCards" class="category-grid"></div>
+        </section>         
+
+        <section class="stats">
+            <h2>
+                BrainStorm Statistics
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3 id="totalUsers">
+                        0
+                    </h3>
+
+                    <p>
+                        Registered Users
+                    </p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h3 id="totalQuestions">
+                        0
+                    </h3>
+
+                    <p>
+                        Questions
+                    </p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3 id="totalAttempts">
+                        0
+                    </h3>
+
+                    <p>
+                        Quiz Attempts
+                    </p>
+                </div>
+
+                <div class="stat-card">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3 id="totalCategories">
+                        0
+                    </h3>
+
+                    <p>
+                        Categories
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-performers">
+            <h2>
+                🏆 Top Performers
+            </h2>
+            <div id="homeLeaderboard"></div>
+        </section>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="inline">
+                        <i class="fa-solid fa-brain"></i>
+                        <h2>BrainStorm Quiz</h2>
+                    </div>
+
+                    <p>
+                        Challenge your mind.
+                        Learn something new every day.
+                    </p>
+
+                    <h4>Developed by</h4>
+                    Mst. Rafia Khatun 
+
+                    <div class="footer-social">
+                        <a href="https://github.com/rafia419" target="_blank" >
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mst-rafia-khatun-811391426" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+
+                        <a
+                            href="mailto:mstrafiakhatun419@gmail.com"
+                        >
+                            <i class="fa-solid fa-envelope"></i>
+                            Email
+                        </a>
+
+                    </div> 
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about/about.html">About</a>
+                    <a href="profile/profile.html">Profile</a>
+                    <a href="add question/add-questions.html">Add Questions</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Categories</h3>
+                    <p>🌐 HTML</p>
+                    <p>🎨 CSS</p>
+                    <p>⚡ JavaScript</p>
+                    <p>🤖 Machine Learning</p>
+                    <p>🧠 General Knowledge</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © <span id="year"></span> BrainStorm Quiz | All Rights Reserved
+            </div>
+        </footer>
+
+        <button id="topBtn">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        <script src="homepg.js"></script>
+        <script src="js/auth.js"></script>
+        <script src="js/category-dropdown.js"></script>
+        <script src="js/quiz-navigation.js"></script>
+    </body>
+</html>

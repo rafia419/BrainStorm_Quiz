@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        About | BrainStorm Quiz
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="about.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-brain"></i>
+                <h2>BrainStorm Quiz</h2>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+
+                <li class="dropdown"><a href="#"> Categories <i class="fa-solid fa-chevron-down"></i> </a>
+                    <ul class="dropdown-menu">
+                        <li><a data-category="HTML">HTML</a></li>
+                        <li><a data-category="CSS">CSS</a></li>
+                        <li><a data-category="JavaScript">JavaScript</a></li>
+                        <li><a data-category="Machine Learning">Machine Learning</a></li>
+                        <li><a data-category="General Knowledge">General Knowledge</a></li>
+                        <li class="mobile-user"><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="../add question/add-questions.html" class="signLink">Add Questions</a></li>
+                <li id="profileNav" style="display:none;"><a href="../profile/profile.html">Profile </a></li>
+                <li><a href="../about/about.html" class="home">About</a></li>
+            </ul>
+
+            <div class="nav-btn" id="navButtons">
+                <a href="../sign-up-in page/login.html">
+                <button class="sign-in">Sign In</button>
+                </a>
+
+                <a href="../sign-up-in page/register.html">
+                <button class="sign-in">Sign Up</button>
+                </a>
+            </div>
+        </nav>
+    <section class="about-hero">
+
+        <h1>
+            About
+            <span>
+                BrainStorm Quiz
+            </span>
+        </h1>
+
+        <p>
+
+            BrainStorm Quiz is an interactive learning platform
+            designed to make education more engaging through
+            quizzes, progress tracking, achievements, and
+            community-created questions.
+
+        </p>
+
+    </section>
+
+
+    <section class="about-features">
+
+        <h2>
+            Key Features
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h3>
+                    Smart Quiz
+                </h3>
+
+                <p>
+                    Practice quizzes from multiple categories.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>
+                    Progress Tracking
+                </h3>
+
+                <p>
+                    Monitor your performance and quiz history.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-trophy"></i>
+
+                <h3>
+                    Achievements
+                </h3>
+
+                <p>
+                    Unlock badges by completing challenges.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-circle-plus"></i>
+
+                <h3>
+                    Add Questions
+                </h3>
+
+                <p>
+                    Create and share your own quiz questions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="technology">
+
+        <h2>
+            Technologies Used
+        </h2>
+
+        <div class="tech-grid">
+
+            <div>HTML5</div>
+
+            <div>CSS3</div>
+
+            <div>JavaScript</div>
+
+            <div>LocalStorage</div>
+
+            <div>Font Awesome</div>
+
+            <div>Google Fonts</div>
+
+        </div>
+
+    </section>
+
+
+    <section class="workflow">
+
+        <h2>
+            How BrainStorm Works
+        </h2>
+
+        <div class="workflow-grid">
+
+            <div>
+
+                <span>1</span>
+
+                <p>
+                    Register
+                </p>
+
+            </div>
+
+            <div>
+
+                <span>2</span>
+
+                <p>
+                    Login
+                </p>
+
+            </div>
+
+            <div>
+
+                <span>3</span>
+
+                <p>
+                    Select Category
+                </p>
+
+            </div>
+
+            <div>
+
+                <span>4</span>
+
+                <p>
+                    Play Quiz
+                </p>
+
+            </div>
+
+            <div>
+
+                <span>5</span>
+
+                <p>
+                    Track Progress
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="developer">
+
+        <h2>
+            Developer
+        </h2>
+
+        <div class="developer-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>
+                Mst. Rafia Khatun
+            </h3>
+
+            <p>
+
+                Computer Science & Engineering Student
+
+            </p>
+
+            <p>
+
+                Passionate about Web Development,
+                JavaScript and UI Design.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="future">
+
+        <h2>
+            Future Improvements
+        </h2>
+
+        <div class="future-grid">
+
+            <div>
+                <span>🌙</span>
+                <p>Dark Mode</p>
+            </div>
+
+            <div>
+                <span>🎯</span>
+                <p>Difficulty Levels</p>
+            </div>
+
+            <div>
+                <span>🔍</span>
+                <p>Question Search</p>
+            </div>
+
+            <div>
+                <span>📱</span>
+                <p>Mobile Optimization</p>
+            </div>
+
+            <div>
+                <span>☁ </span>
+                <p>Cloud Database</p>
+            </div>
+
+            <div>
+                <span>👨‍💼</span>
+                <p>Admin Dashboard</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="connect">
+
+        <h2>
+            Connect With Me
+        </h2>
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/rafia419"
+                target="_blank"
+            >
+                <i class="fa-brands fa-github"></i>
+
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/mst-rafia-khatun-811391426"
+                target="_blank"
+            >
+                <i class="fa-brands fa-linkedin"></i>
+
+                LinkedIn
+            </a>
+
+            <a
+                href="mailto:mstrafiakhatun419@email.com"
+            >
+                <i class="fa-solid fa-envelope"></i>
+
+                Email
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-footer">
+        <div class="footer-bottom">
+            © <span id="year"></span> BrainStorm Quiz | All Rights Reserved
+        </div>
+
+        <button
+            class="back-btn"
+            onclick="history.back()"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back
+
+        </button>
+
+
+    </section>
+
+        <script src="../js/auth.js"></script>
+        <script src="../js/category-dropdown.js"></script>
+        <script src="../js/quiz-navigation.js"></script>
+        <script src="about.js"></script>
+
+</body>
+
+</html>
